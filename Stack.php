@@ -14,7 +14,10 @@ class Stack
 
     public function push($item)
     {
+        if ($this->limit < count($this->stack)){
         array_unshift($this->stack,$item);
+        }
+        else echo "No space left";
     }
 
     public function pop()
